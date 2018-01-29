@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head>  
+<link rel="stylesheet" href="style.css" type="text/css">
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -42,18 +44,50 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+	  <div class="dropdown">
+  <button class="dropbtn">JoinUs</button>
+  <div class="dropdown-content">
+    <a href="#">Home</a>
+    <a href="#">JoinUs</a>
+	<a href="#">AboutUs</a>
+  </div>
+</div>
+
       <form class="navbar-form navbar-left">
+	  
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search">
         </div>
         <button type="submit" class="btn btn-default">Search</button>
       </form>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link</a></li>
-      </ul>
+     
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+
+
+<div class="regform">
+<img src="yogaa.jpg" class="yogaa">
+ <form action="index.html">
+ <br>
+		<input type="text" id="uname" name="username" placeholder="User Name"> 
+	    <input type="text" id="fname" name="firstname" placeholder="First Name">
+		<input type="text" id="lname" name="lastname" placeholder="Last Name">
+		<input type="email" id="email" name="email" placeholder="Email Adress">
+		<input type="password" id="pw" name="password" placeholder="Enter Password">
+		<input type="password" id="pw1" name="password" placeholder="Confirm Password">
+	<select id="gender" name="gender">
+		<option value="Gender">Gender</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+    </select>
+ <button onclick="registerUser()">Submit</button> 
+	</form>
+		</div>	
+
+
+
+
+
 </body>
 </html>
