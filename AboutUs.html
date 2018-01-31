@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>  
-<link rel="stylesheet" href="style.css" type="text/css">
-
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,11 +17,19 @@
     <!-- Background -->
     <style type="text/css">
 
+    body{
+
+
+    background-image: url(backgroundMin.jpg);
+    background-size: 100%; 
+    background-repeat: no-repeat;
+    }
 
 </style>
 </head>
 <body>
 
+ 
     
 
 <nav class="navbar navbar-default">
@@ -37,45 +43,58 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="#">
-      	<img src="logo2.png" style="">
+        <img src="logo2.png" style="">
       </a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-	  <div class="dropdown">
-  <button class="dropbtn">AboutUs</button>
-  <div class="dropdown-content">
-    <a href="#">Home</a>
-    <a href="#">JoinUs</a>
-	<a href="#">AboutUs</a>
-	
-  </div>
-</div>
-
+      <ul class="nav navbar-nav navbar">
+        <li><a href="Ecommerce.html">Home <span class="sr-only">(current)</span></a></li>
       <form class="navbar-form navbar-left">
-	  
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
+          <input type="text" class="form-control" placeholder="Find Item">
         </div>
         <button type="submit" class="btn btn-default">Search</button>
       </form>
-     
+      </ul>
+
+      <ul class="nav navbar-nav navbar-left">
+
+        <li><a href="JoinUs.html">Join us</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li  class="active"><a href="AboutUs.html">About</a></li>
+
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="shoppingCart.html" role="button" aria-expanded="false"> <span class="glyphicon glyphicon-shopping-cart"></span>   Items   </a>
+        </li>
+      </ul>
+
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
+
 </nav>
 
-<img src="image2.jpg" class="image2">
-<img src="image3.jpg" class="image3">
-<img src="image1.jpg" class="image1">
 
-
-<p >This company was devloped by two young minds in early may 2016; their passion for relaxsation turned into a creative bussiness oppertunity.
- </p>
-
-
-
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>About Us</h2>
+                  
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-lg-offset-2">
+                    <p>Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p>
+                </div>
+                <div class="col-lg-4">
+                    <p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p>
+                </div>
+            </div>
+        </div>
 
 </body>
 </html>
