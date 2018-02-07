@@ -1,60 +1,60 @@
-	//product document 
-	{
-	Id : object id (".....")
-	Name: "plain mat"
-	Description : "plain and blue"
-	image_url : ""
-	Height: "150cm"
-	Width : "50cm"
-	Price : "£25.99"
-	Stock_avalibilty :  "20"
-		}
-
-	//Customer document
-	{
-	Id : object id ("....")
-	FirstName: "Saibah"
-	LastName: "Akhtar"
-	Adress: "32 Albert st, london, N1 PT"
-	TelephoneNum: "07109823788"
-	Email: "saibah@yahoo.com"
-		}
+﻿//product document 
 {
-	Id : object id ("....")
-	FirstName: "david"
-	LastName: "Akhtar"
-	Adress: "19 beechwood st, london, N1 FK"
-	TelephoneNum: "07467992871"
-	Email: "David@hotmaail.com"
-		}
+Id : object id (".....")
+Name: "plain mat"
+Description : "plain and blue"
+image_url : ""
+Height: "150cm"
+Width : "50cm"
+Price : "£25.99"
+Stock_avalibilty :  "20"
+}
+
+//Customer document
+{
+Id : object id ("....")
+FirstName: "Saibah"
+LastName: "Akhtar"
+Adress: "32 Albert st, london, N1 PT"
+TelephoneNum: "07109823788"
+Email: "saibah@yahoo.com"
+}
+{
+Id : object id ("....")
+FirstName: "david"
+LastName: "Akhtar"
+Adress: "19 beechwood st, london, N1 FK"
+TelephoneNum: "07467992871"
+Email: "David@hotmaail.com"
+}
 
 
-	//Order Document
-	{
-	Id : Object id("...")
-	customer_Id:Object id("...")
-	Shipping Adress: "32 Albert st, london, N1 PT"
-	Date : "12/03/18"
-	Time : "12:35"
-	cost : 25.99 
-	Products: [
-	{ 	Id : object id("...")
-		count : 1 }
-			]
-		}
-		
-		
-	//Cart Document 
+//Order Document
+{
+Id : Object id("...")
+customer_Id:Object id("...")
+Shipping Adress: "32 Albert st, london, N1 PT"
+Date : "12/03/18"
+Time : "12:35"
+cost : 25.99 
+Products: [
+{ Id : object id("...")
+count : 1 }
+]
+}
 
-	{
-	Id : Object id("...")
-	customer_Id:Object id("...")
-	session_Id : "ljdfksljnbjkfjdhd"
-	Date : "12/03/18"
-	Time : "12:35"
-	cost : 25.99 
-	Products: [
-	{ 	Id : object id("...")
-		count : 1 }
-		]
-	}
+
+//Cart Document 
+
+{
+Id : Object id("...")
+customer_Id:Object id("...")
+session_Id : "ljdfksljnbjkfjdhd"
+Date : "12/03/18"
+Time : "12:35"
+cost : 25.99 
+Products: [
+{ Id : object id("...")
+count : 1 }
+]
+}
