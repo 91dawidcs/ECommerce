@@ -1,0 +1,51 @@
+/* CSS for styling the HTML page*/
+
+/* styling of h1 heading*/
+h1 { 
+    display: inline;
+    font-size: 6em;
+    margin-top: 3em;
+    margin-bottom: 2em;
+}
+
+/* styling of h4 heading*/
+h4 { 
+    display: block;
+    font-size: 3em;
+    margin-top: 1.33em;
+    margin-left: 15px;
+    margin-right: 10px;
+}
+
+/* background */
+body {
+    background-image: url(whitebackground.jpg);
+    background-repeat: repeat;
+}
+
+/* division vertically align */
+div {
+    vertical-align: bottom;
+}
+
+/*paragraph center align and colored yellow*/
+p {
+    text-align: center;
+    color: yellow;
+}
+
+/*container class with padding and margin*/
+.container {
+  padding-right: 50px;
+  padding-left: 40px;
+  margin-right: auto;
+  margin-left: 50px
+}
+
+/*fluid container with padding and margin*/
+.container-fluid {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
