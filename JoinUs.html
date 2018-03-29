@@ -86,22 +86,21 @@
         <div class="col-md-offset-5 col-md-3">
           <div class="form-register">
               <h4>Registration</h4>
-
-                <input type="text" id="firstName" class="form-control input-sm chat-input" placeholder="First name" />
+               <form action="add_customer.php" method="post">
+                <input type="text" name="firstName" required id="firstName" class="form-control input-sm chat-input" placeholder="First name" />
                     </br>
-                <input type="text" id="lastName" class="form-control input-sm chat-input" placeholder="Last name" />
+                <input type="text" name="lastName" required id="lastName" class="form-control input-sm chat-input" placeholder="Last name" />
                     </br>
-                <input type="text" id="userName" class="form-control input-sm chat-input" placeholder="Username" />
+                <input type="text" name="userName" required id="userName" class="form-control input-sm chat-input" placeholder="Username" />
                     </br>
-                <input type="text" id="userPassword" class="form-control input-sm chat-input" placeholder="Password" />
+                <input type="password" name="password" required id="userPassword" class="form-control input-sm chat-input" placeholder="Password" />
                     </br>
-                <input type="text" id="telNumber" class="form-control input-sm chat-input" placeholder="Telnumber" />
+                <input type="email" name="email" required id="email" class="form-control input-sm chat-input" placeholder="Email@ddress" />
                     </br>
-              <div class="wrapper">
-                <span class="group-btn">     
-                <a href="#" class="btn btn-primary btn-md">register <i class="fa fa-sign-in"></i></a>
-                </span>
-              </div>
+                <input type="text" name="telNumber" required id="telNumber" class="form-control input-sm chat-input" placeholder="Telnumber" />
+                    </br>
+                <input type="submit">
+              </form>
           </div>
         </div>
       </div>
