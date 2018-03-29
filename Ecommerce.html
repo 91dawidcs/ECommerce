@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+         <!--- searches the recommender file ---> 
+		 <script src="recommender.js"></script>
     <!--Name of the page-->
     <title>Tathata</title>
 
@@ -258,7 +259,32 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-
+	<script>
+//Create recommender object - it loads its state from local storage
+            var recommender = new Recommender();
+            
+            //Display recommendation
+            window.onload = showRecommendation;
+            
+            //Searches for products in database
+            function search(){
+                //Extract the search text
+                var searchText = document.getElementById("SearchInput").value;
+                
+                //Add the search keyword to the recommender
+                recommender.addKeyword(searchText);
+                showRecommendation();
+                
+                //#FIXME# PERFORM SEARCH FOR PRODUCTS
+            }
+            
+            //Display the recommendation in the document
+            function showRecommendation(){
+                document.getElementById("RecomendationDiv").innerHTML = recommender.getTopKeyword();
+            }	
+	
+	
+</script>
 </body>
 
 </html>
