@@ -11,7 +11,7 @@ $collection = $db->customers;
 //Extract the data that was sent to the server
 $firstName= filter_input(INPUT_POST, 'firstName', FILTER_SANITIZE_STRING);
 $lastName= filter_input(INPUT_POST, 'lastName', FILTER_SANITIZE_STRING);
-$userName= filter_input(INPUT_POST, 'userName', FILTER_SANITIZE_STRING);
+$name= filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
 $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
 $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
 $telNumber = filter_input(INPUT_POST, 'telNumber', FILTER_SANITIZE_STRING);
@@ -21,7 +21,7 @@ $telNumber = filter_input(INPUT_POST, 'telNumber', FILTER_SANITIZE_STRING);
 $dataArray = [
 	"firstName" => $firstName,
 	"lastName" => $lastName,
-    "userName" => $name,
+    "name" => $name,
     "password" => $password,
     "email" => $email,
     "telNumber" => $telNumber
