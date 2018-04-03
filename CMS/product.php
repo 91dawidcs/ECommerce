@@ -51,17 +51,23 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar">
-        <li><a href="product.php">Products <span class="sr-only">(current)</span></a></li>
+<<<<<<< Updated upstream
+        <li c lass="active"><a href="product.html">Products <span class="sr-only">(current)</span></a></li>
+=======
+        <li c lass="active"><a href="product.php">Products <span class="sr-only">(current)</span></a></li>
+>>>>>>> Stashed changes
       </ul>
 
       <!--navbar for other pages-->
       <ul class="nav navbar-nav navbar-left">
 
-        <li class="active"><a href="Orders.html">Orders</a></li>
+        <li><a href="orders.html">Orders</a></li>
 
       </ul>
 
-      <ul class="nav navbar-nav navbar-left">
+<<<<<<< Updated upstream
+=======
+        <ul class="nav navbar-nav navbar-left">
 
         <li ><a href="customerData.html">Modify/delete customer data</a></li>
 
@@ -73,17 +79,61 @@
 
       </ul>
 
+>>>>>>> Stashed changes
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 
 </nav>
 
-<div class="container">
+<!-- Button to add new product-->
+<td><a style="font-size: 25px" href="addproduct.html" class="btn btn-success btn-block">Add New Product <i class="fa fa-angle-right"></i></a></td>
+
+
+ <div class="container">
 
            
-    <h1> Orders </h1>
+    <h1> Products </h1>
 
-</div>
+<!-- PHP loads product information -->        
+        <?php
+
+        //Connect to MongoDB and select database
+        $mongoClient = new MongoClient();
+        $db = $mongoClient->ecommerce;
+        
+        //Find all products
+        $products = $db->products->find();
+
+        //Output results onto page
+        if($products->count() > 0){
+           
+            echo '<table width="100%" cellspacing="2" cellpadding="0" border="0" align="center"';
+            echo '<tr><th>ID</th><th>Name</th><th>Quantity</th><th>Price</th></tr>';
+            foreach ($products as $document) {
+                echo '<tr>';
+<<<<<<< Updated upstream
+                echo '<td>' . $document["productid"] . "</td>";
+=======
+                echo '<td>' . $document["_id"] . "</td>";
+>>>>>>> Stashed changes
+                echo '<td>' . $document["productname"] . "</td>";
+                echo '<td>' . $document["quantity"] . "</td>";
+                echo '<td>' . $document["price"] . "</td>";
+                echo '</tr>';
+            }
+            echo '</table>';
+       
+        }
+
+        //Close the connection
+        $mongoClient->close();
+
+        ?>
+
+  </div>
+
+<td><a style="font-size: 15px" href="loginAdmin.html" class="btn btn-success btn-block">Proceed to Logout <i class="fa fa-angle-right"></i></a></td>
+
 
 
       <!-- jQuery -->
