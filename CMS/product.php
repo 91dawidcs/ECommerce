@@ -51,7 +51,15 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar">
+<<<<<<< HEAD
         <li c lass="active"><a href="product.php">Products <span class="sr-only">(current)</span></a></li>
+=======
+<<<<<<< Updated upstream
+        <li c lass="active"><a href="product.html">Products <span class="sr-only">(current)</span></a></li>
+=======
+        <li c lass="active"><a href="product.php">Products <span class="sr-only">(current)</span></a></li>
+>>>>>>> Stashed changes
+>>>>>>> master
       </ul>
 
       <!--navbar for other pages-->
@@ -61,6 +69,11 @@
 
       </ul>
 
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+=======
+>>>>>>> master
         <ul class="nav navbar-nav navbar-left">
 
         <li ><a href="customerData.html">Modify/delete customer data</a></li>
@@ -73,6 +86,10 @@
 
       </ul>
 
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
+>>>>>>> master
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 
@@ -104,7 +121,15 @@
             echo '<tr><th>ID</th><th>Name</th><th>Quantity</th><th>Price</th></tr>';
             foreach ($products as $document) {
                 echo '<tr>';
+<<<<<<< HEAD
                 echo '<td>' . $document["_id"] . "</td>";
+=======
+<<<<<<< Updated upstream
+                echo '<td>' . $document["productid"] . "</td>";
+=======
+                echo '<td>' . $document["_id"] . "</td>";
+>>>>>>> Stashed changes
+>>>>>>> master
                 echo '<td>' . $document["productname"] . "</td>";
                 echo '<td>' . $document["quantity"] . "</td>";
                 echo '<td>' . $document["price"] . "</td>";
