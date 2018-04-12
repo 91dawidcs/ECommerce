@@ -1,32 +1,79 @@
 ﻿//product document 
-{
-Id : object id (".....")
-Name: "plain mat"
-Description : "plain and blue"
-image_url : ""
-Height: "150cm"
-Width : "50cm"
-Price : "£25.99"
-Stock_avalibilty :  "20"
-}
 
-//Customer document
-{
-Id : object id ("....")
-FirstName: "Saibah"
-LastName: "Akhtar"
-Adress: "32 Albert st, london, N1 PT"
-TelephoneNum: "07109823788"
-Email: "saibah@yahoo.com"
-}
-{
-Id : object id ("....")
-FirstName: "david"
-LastName: "Akhtar"
-Adress: "19 beechwood st, london, N1 FK"
-TelephoneNum: "07467992871"
-Email: "David@hotmaail.com"
-}
+db.Products.insert({
+Name: "plain mat" ,
+Description : "plain and blue, square" ,
+Height: "150cm" ,
+Width : "50cm" ,
+Price : "£25.99" ,
+Stock_avalibilty :  "20" ,
+})
+
+db.Products.insert({
+Name: "pattern mat" ,
+Description : " flower design , square, pink, blue, white, rectangle" ,
+Height: "150cm" ,
+Width : "50cm" ,
+Price : "£35.99" ,
+Stock_avalibilty :  "22" ,
+})
+
+
+db.Products.insert({
+Name: "relaxing mat" ,
+Description : "plain ,blue, balck, gray, square" ,
+Height: "150cm" ,
+Width : "50cm" ,
+Price : "£15.99" ,
+Stock_avalibilty :  "50" ,
+})
+
+db.Products.insert({
+Name: "textured mat" ,
+Description : "gray, prink, darkblue, black, rectangle" ,
+Height: "150cm" ,
+Width : "50cm" ,
+Price : "£12.99" ,
+Stock_avalibilty :  "40" ,
+})
+
+
+
+
+       //Customer document
+
+db.Customer.insert({
+FirstName: "Saibah",
+LastName: "Akhtar" ,
+Adress: "32 Albert st, london, N1 PT" ,
+TelephoneNum: "07109823788" ,
+Email: "saibah@yahoo.com",
+})
+
+db.Customer.insert({
+FirstName: "jack" ,
+LastName: "hill" ,
+Adress: "4 hays rd, london, j2 PT" ,
+TelephoneNum: "07103473709" ,
+Email: "jackhill@hotmail.com" ,
+})
+
+db.Customer.insert({
+FirstName: "david" ,
+LastName: "gamez" ,
+Adress: "90 oxford rd, manchester, gf2 PT" ,
+TelephoneNum: "07948772891" ,
+Email: "gamez33@yahoo.com" ,
+})
+
+db.Customer.insert({
+FirstName: "ellen" ,
+LastName: "white" ,
+Adress: "2 hellway rd, slough, sl3  4PT" ,
+TelephoneNum: "07948377689" ,
+Email: "ellenwhite@yahoo.com" ,
+})
+
 
 
 //Order Document

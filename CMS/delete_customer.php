@@ -19,7 +19,11 @@ $returnVal = $db->customers->remove($remCriteria);
     
 //Echo result back to user
 if($returnVal['ok']==1){
+<<<<<<< HEAD
     header('Location: customerData.php');
+=======
+    echo 'Ok ' . $returnVal['n'] . ' documents deleted.';
+>>>>>>> master
 }
 else{
    echo 'Error deleting product';
