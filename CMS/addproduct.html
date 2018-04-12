@@ -13,7 +13,8 @@
     <link href="css/bootstrap.css" rel="stylesheet">
    
     <!-- Bootstrap themes css -->
-    <link rel="stylesheet" type="css/bootstrap-theme.min.css" href="">
+    <link rel="stylesheet" type="css/bootstrap-theme.css" href="">
+    <link rel="stylesheet" type="style.css" href="">
 
     <!-- Background -->
     <style type="text/css">
@@ -30,99 +31,53 @@
 </head>
 <body>
 
-<form class="form-horizontal">
-<fieldset>
+
 
 <!-- H1 name of the page -->
 
-<h1>Add products</h1>
 
-<!-- Product ID-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="product_id">Product ID</label>  
-  <div class="col-md-4">
-  <input id="product_id" name="product_id" placeholder="PRODUCT ID" class="form-control input-md" required="" type="text">
-    
-  </div>
-</div>
 
-<!-- Product name-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="product_name">Name of the product</label>  
-  <div class="col-md-4">
-  <input id="product_name" name="product_name" placeholder="PRODUCT NAME" class="form-control input-md" required="" type="text">
-    
-  </div>
-</div>
+ <div class="container">
+      <div class="row">
+        <div class="col-md-offset-5 col-md-3">
+          <div class="form-register">
+              <h4>Add new products</h4>
+               <form action="add_product.php" method="post">
+                <input type="text" name="productid" required id="productid" class="form-control input-sm chat-input" placeholder="productid" />
+                    </br>
+                <input type="text" name="productname" required id="productname" class="form-control input-sm chat-input" placeholder="productname" />
+                    </br>
+                <input type="text" name="quantity" required id="quantity" class="form-control input-sm chat-input" placeholder="quantity" />
+                    </br>
+                <input type="text" name="productwidth" required id="productwidth" class="form-control input-sm chat-input" placeholder="productwidth" />
+                    </br>
+                <input type="text" name="productheight" required id="productheight" class="form-control input-sm chat-input" placeholder="productheight" />
+                    </br>
+                <input type="text" name="description" required id="description" class="form-control input-sm chat-input" placeholder="description" />
+                    </br>
+                <input type="text" name="price" required id="price" class="form-control input-sm chat-input" placeholder="price" />
+                    </br>  
+                         <div class="col-md-4">
+                <input type="submit">
+                </br>
+               </div>
+               </div>
+              </div>     
+             </form>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<!-- Select Basic -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="product_categorie">Categorie of the product</label>
-  <div class="col-md-4">
-    <select id="product_categorie" name="product_categorie" class="form-control">
-    </select>
-  </div>
-</div>
 
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="available_quantity">Quantity</label>  
-  <div class="col-md-4">
-  <input id="available_quantity" name="available_quantity" placeholder="QUANTITY" class="form-control input-md" required="" type="text">
-    
-  </div>
-</div>
-
-<!-- Product width-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="product_weight">Product width</label>  
-  <div class="col-md-4">
-  <input id="product_width" name="product_width" placeholder="PRODUCT WIDTH" class="form-control input-md" required="" type="text">
-    
-  </div>
-</div>
-
-<!-- Product height-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="product_weight">Product height</label>  
-  <div class="col-md-4">
-  <input id="product_height" name="product_height" placeholder="PRODUCT HEIGHT" class="form-control input-md" required="" type="text">
-    
-  </div>
-</div>
-
-<!-- Description of the product -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="product_name_fr">Product description</label>
-  <div class="col-md-4">                     
-    <textarea class="form-control" id="product_name_fr" name="product_name_fr"></textarea>
-  </div>
-</div>
-
-<!-- Price of the product-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="percentage_discount">Price of the Product</label>  
-  <div class="col-md-4">
-  <input id="price" name="price" placeholder="PRICE" class="form-control input-md" required="" type="text">
-    
-  </div>
-</div>
     
  <!-- add image --> 
-<div class="form-group">
-  <label class="col-md-4 control-label" for="filebutton">Add Image</label>
-  <div class="col-md-4">
-    <input id="filebutton" name="filebutton" class="input-file" type="file">
-  </div>
-</div>
 
-<!-- Button to add new product-->
-<td><a style="font-size: 20px" href="#" class="btn btn-success btn-block">Add New Product <i class="fa fa-angle-right"></i></a></td>
 
-<td><a style="font-size: 20px" href="product.html" class="btn btn-success btn-block">Back <i class="fa fa-angle-right"></i></a></td>
+</br>
+<td><a style="font-size: 20px" href="product.php" class="btn btn-success btn-block">Back <i class="fa fa-angle-right"></i></a></td>
 
-</fieldset>
-</form>
+
 
       <!-- jQuery -->
     <script src="js/jquery.js"></script>

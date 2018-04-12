@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-   <!--Name of the page-->
+    <!--Name of the page-->
     <title>Tathata</title>
 
   
@@ -21,9 +21,9 @@
     body{
 
 
-    background-image: url(backgroundMin.jpg);
-    background-size: 100%;  
-    background-repeat: no-repeat;
+	 	background-image: url(backgroundMin.jpg);
+	 	background-size: 100%;	
+	 	background-repeat: no-repeat;
     }
 
 </style>
@@ -44,14 +44,14 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="#">
-        <img src="logo2.png" style="">
+      	<img src="logo2.png" style="">
       </a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar">
-        <li><a href="Ecommerce.php">Home <span class="sr-only">(current)</span></a></li>
+        <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
       <form class="navbar-form navbar-left">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Find Item">
@@ -63,7 +63,7 @@
       <!--navbar for other pages-->
       <ul class="nav navbar-nav navbar-left">
 
-        <li class="active"><a href="JoinUs.html">Join us</a></li>
+        <li><a href="JoinUs.html">Join us</a></li>
         <li><a href="login.html">Login/Logout</a></li>
         <li><a href="AboutUs.html">About</a></li>
 
@@ -80,30 +80,53 @@
 
 </nav>
 
- <!-- Register -->
-   <div class="container">
-      <div class="row">
-        <div class="col-md-offset-5 col-md-3">
-          <div class="form-register">
-              <h4>Registration</h4>
-               <form action="add_customer.php" method="post">
-                <input type="text" name="name" required id="name" class="form-control input-sm chat-input" placeholder="UserName" />
-                    </br>
-                <input type="password" name="password" required id="userPassword" class="form-control input-sm chat-input" placeholder="Password" />
-                    </br>
-                <input type="email" name="email" required id="email" class="form-control input-sm chat-input" placeholder="Email@ddress" />
-                    </br>
-                <input type="text" name="telNumber" required id="telNumber" class="form-control input-sm chat-input" placeholder="Telnumber" />
-                    </br>
-                <input type="submit">
-              </form>
-          </div>
-        </div>
-      </div>
+  <!-- Page Content -->
+  
+  <div class="container">
+
+  <td><a href="shoppingCart.html" class="btn btn-warning"><i class="fa fa-angle-left"></i> Check Basket</a></td>
+
+  <h1>Tathata</h1>
+
+        <!-- PHP loads product information -->        
+        <?php
+
+        //Connect to MongoDB and select database
+        $mongoClient = new MongoClient();
+        $db = $mongoClient->ecommerce;
+        
+        //Find all products
+        $products = $db->products->find();
+
+        //Output results onto page
+        if($products->count() > 0){
+            echo '<table width="100%" cellspacing="2" cellpadding="0" border="0" align="center"';
+            echo '<tr><th>ID</th><th>Name</th><th>Description</th><th>Add item</th></tr>';
+            foreach ($products as $document) {
+                echo '<tr>';
+                echo '<td>' . $document["_id"] . "</td>";
+                echo '<td>' . $document["productname"] . "</td>";
+                echo '<td>' . $document["description"] . "</td>";
+                echo '<td><button onclick=\'addToBasket("' . $document["_id"] . '", "' . $document["productname"] . '")\'>';
+                echo '<img class="addButtonImg" width="20px" height="20px" src="basket-add-icon.png"></button></td>';
+                echo '</tr>';
+            }
+            echo '</table>';
+        }
+
+        //Close the connection
+        $mongoClient->close();
+
+        ?>
+
     </div>
 
-  <!-- jQuery -->
+
+
+	<!-- jQuery -->
     <script src="js/jquery.js"></script>
+
+    <script src="basket.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
